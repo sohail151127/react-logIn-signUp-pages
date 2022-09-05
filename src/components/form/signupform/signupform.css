@@ -1,0 +1,43 @@
+
+
+.background{
+    background: url("/public/background/1.jpg");
+    height: 91vh;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+}
+
+.border{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    font-size: 18px;
+    margin: auto;
+    margin-top: 5%;
+    width: 30%;
+    border: 3px solid white;
+    padding: 10px;
+
+}
+
+.reg{
+    font-size: large;
+    font-weight: bold;
+    color: rgb(232, 229, 238);
+    text-align: center;
+    margin: 2%;
+}
+
+.styling{
+    
+    text-align: center;
+
+}
+.line{
+    margin: 0;
+}
+.info{
+    color: white;
+}
