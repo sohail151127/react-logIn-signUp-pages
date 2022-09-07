@@ -42,3 +42,23 @@
     color: white;
     margin: 0;
 }
+
+.abc{
+    border: 3px solid rgb(63, 55, 216);
+    position: relative;
+    bottom: 60%;
+    width: 30%;
+    text-align: center;
+    color: rgb(55, 49, 59);
+    font-weight: 700;
+    margin-left: 10px;
+    border-radius: 12px;
+    
+}
+
+.def{
+    font-weight: bold;
+    color: rgb(97, 90, 24);
+    text-align: center;
+    margin-bottom: 12px;
+}

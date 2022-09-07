@@ -23,7 +23,6 @@ const LogInForm = () => {
       password: enteredPassword, 
     }
 
-    console.log(LogInData);
     
     setEnteredEmail("")
     setEnteredPassword("")
@@ -46,6 +45,11 @@ const LogInForm = () => {
     })
 
   }
+
+  const handle =()=>{
+    localStorage.setItem("Email", enteredEmail)
+    localStorage.setItem("Password", enteredPassword)
+  }
   
   return (
     <>
@@ -66,7 +70,7 @@ const LogInForm = () => {
 </div>
 
 <div className="col-12">
-<button type="submit" className="btn btn-success">Sign In</button>
+<button type="submit" onClick={handle} className="btn btn-success">Sign In</button>
 </div>
 
 <div className='line'>
@@ -87,6 +91,15 @@ const LogInForm = () => {
 
 </div>
     </div>
+
+    <div className='abc'>
+          <div className='def'> Data saved in localStorage:</div>
+          
+          <div>{localStorage.getItem("Email")}</div>
+          <div>{localStorage.getItem("Password")}</div>
+          
+    </div>
+
     </div>
     </>
   )

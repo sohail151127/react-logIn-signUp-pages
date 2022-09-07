@@ -35,7 +35,6 @@ const SignUpForm = () => {
       password_confirmation: confirmPassword
     }
 
-    console.log(SignUpData);
     
     setEnteredName("")
     setEnteredEmail("")
@@ -60,13 +59,20 @@ const SignUpForm = () => {
     })
   }
 
+  const handle =()=>{
+    localStorage.setItem("Name", enteredName)
+    localStorage.setItem("Email", enteredEmail)
+    localStorage.setItem("Password", enteredPassword)
+    localStorage.setItem("ConfirmPassword", confirmPassword)
+  }
+
   return (
     <>
     <div className='background'>
     <div className='border'>
     <div className='reg'>Create an account</div>
     <div className='styling'>
-    <form onSubmit={submitHandler} className="row g-3 needs-validation" novalidate>
+    <form onSubmit={submitHandler} className="row g-3 needs-validation" >
 
         <div className="col-12">
         <input type="text" value={enteredName} onChange={nameHandler} className="form-control" placeholder="Your Name" aria-label="Your Name" required />
@@ -85,7 +91,7 @@ const SignUpForm = () => {
         </div>
 
         <div className="col-12">
-        <button type="submit" className="btn btn-primary">Sign Up</button>
+        <button type="submit" onClick={handle} className="btn btn-primary">Sign Up</button>
         </div>
 
         <div className='line'>
@@ -104,8 +110,16 @@ const SignUpForm = () => {
     </form>
     </div>
     </div>
+
+    <div className='infoooo'>
+          <div className='local'> Data saved in localStorage:</div>
+          <div>{localStorage.getItem("Name")}</div>
+          <div>{localStorage.getItem("Email")}</div>
+          <div>{localStorage.getItem("Password")}</div>
+          <div>{localStorage.getItem("ConfirmPassword")}</div>
     </div>
-    
+
+    </div>
     </>
 
   )
