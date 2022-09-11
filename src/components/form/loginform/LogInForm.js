@@ -40,11 +40,16 @@ const LogInForm = () => {
     axios(config)
     .then((res)=>{
       console.log(res);
+      
+      let token= res.data.access_token
+      localStorage.setItem('token',token)
+      
     }).catch((error)=>{
       console.log(error)
     })
 
   }
+  
 
   const handle =()=>{
     localStorage.setItem("Email", enteredEmail)
