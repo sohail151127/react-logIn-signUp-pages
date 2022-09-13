@@ -9,13 +9,19 @@ const Navbar = () => {
     
     <ul className="nav nav-pills">
   <li className="nav-item">
-    <Link className="nav-link active m-1 px-4 bg-success" aria-current="page" to="/LogInForm">Log In</Link>
+    <Link className="nav-link active m-1  bg-success" aria-current="page" to="/LogInForm">Log In</Link>
   </li>
   <li className="nav-item">
-  <Link className="nav-link active m-1 px-4 bg-primary" aria-current="page" to="/SignUpForm">Sign Up</Link>
+  <Link className="nav-link active m-1  bg-primary" aria-current="page" to="/SignUpForm">Sign Up</Link>
   </li>
   <li className="nav-item">
-  <Link className="nav-link active m-1 px-4 bg-primary" aria-current="page" to="/CarComp">CarComp</Link>
+  <Link className="nav-link active m-1 bg-primary" aria-current="page" to="/CarComp">CarComp</Link>
+  </li>
+  <li className="nav-item">
+  <Link className="nav-link active m-1 bg-primary" aria-current="page" to="/LogOut">Log Out</Link>
+  </li>
+  <li className="nav-item">
+  <Link className="nav-link active m-1 bg-primary" aria-current="page" to="/BootStrap">BootStrap</Link>
   </li>
 </ul>
 </nav>
